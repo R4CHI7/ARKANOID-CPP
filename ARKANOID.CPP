@@ -41,6 +41,13 @@ class brick{
 		{
 			  flag=0;
 		}
+		void set2(float x,float y)
+		{
+			  xl = x ;
+			  xr = x+30 ;
+			  yt = y ;
+			  yb = y+20 ;
+		}
 
 		void set(float x,float y)
 		{
@@ -89,10 +96,10 @@ time_t startL, endL, startS, endS ;
 brick b[50] ;
 int insF=0;
 
+int countLvl2=0;
 
 
-
-int bricksLvl1=30;
+int bricksLvl1=30,bricksLvl2=19;
 
 void level_2();
 
@@ -411,7 +418,6 @@ void level_over()
 			n=0;
 		delay(200);
 	}while(!kbhit());
-	exit(0);
 }
 
 void level_1()
@@ -556,6 +562,301 @@ void level_1()
 	}
 }
 
+void level_2()
+{
+
+	setcolor(WHITE) ;
+	outtextxy(20,12,"Lives left: ");
+	int w = textwidth("Lives left: ");
+	for(int i=1;i<=6;i+=2)
+	{
+		setcolor(BLACK) ;
+		rectangle(w+20*i,10,w+20+20*i,20) ;
+		setfillstyle(1,BLACK) ;
+		floodfill(w+20*i + 1,11,BLACK) ;
+	}
+
+	for(i=1;i<=2*num_lives;i+=2)
+	{
+		setcolor(GREEN) ;
+		rectangle(20*i+w,10,w+20+20*i,20) ;
+		setfillstyle(1,GREEN) ;
+		floodfill(w+20*i + 1,11,GREEN) ;
+	}
+
+       //Bricks
+       count=0;
+
+       /***	 Drawing G	**/
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30,yoff+50+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30+30,yoff+50+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2,yoff+50+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2,yoff+50+20+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2,yoff+50+20+20+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30,yoff+50+20+20+20+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30+30,yoff+50+20+20+20+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30+30+30,yoff+50+20+20+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30+30,yoff+50+20+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30+30+30,yoff+50+20+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+       /***  	 G Finish 	***/
+
+
+       /** 	Drawing C 	**/
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30-180,yoff+50+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30+30-180,yoff+50+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2-180,yoff+50+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2-180,yoff+50+20+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2-180,yoff+50+20+20+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30-180,yoff+50+20+20+20+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30+30-180,yoff+50+20+20+20+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30+30+30-180,yoff+50+20+20+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+90-180,yoff+50+20+20) ;
+	     b[count].draw() ;
+       }
+       count++ ;
+       /**	C Finish	****/
+
+       /**	Drawing Blocks	**/
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30+30+30+60+30,yoff+50+20+20+20-20-40) ;
+	     b[count].draw() ;
+       }
+       count++;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30+30+30+60+30+30,yoff+50+20+20+20-20-40+60) ;
+	     b[count].draw() ;
+       }
+       count++;
+
+       if(b[count].flag!=1||countLvl2==0)
+       {
+	     b[count].set2(xoff+xmax/2+30+30+30+60+30+30-30,yoff+50+20+20+20-20-40+60+40) ;
+	     b[count].draw() ;
+       }
+       count++;
+
+       b[15].p = L ;
+       b[7].p = S ;
+
+       if(padF==0)
+       {
+		pad_init();
+		padF=1;
+       }
+       /**	Blocks finish	**/
+
+       if(compF==0)
+       {
+		comp=count ;
+		compF=1;
+       }
+
+	//BALL
+       if(c==0)
+       {
+	   if(!(bally>=padyt-5&&ballx>=padxl&&ballx<=padxr))
+		    c++ ;
+       }
+
+       if(ballx==xoff+5||ballx==xoff+xmax-5)
+	   xdir*=-1 ;
+
+       if(bally==yoff+5||(bally==padyt-5&&ballx>=padxl-5&&ballx<=padxr+5&&c!=0))
+	   ydir*=-1 ;
+
+       if(bally==padyt-5 && (ballx==padxl || ballx==padxr))
+       {
+	   xdir*=-1 ;
+	   ydir=-1 ;
+       }
+
+       if(bally>=padyt && bally<=padyb && (ballx==padxl-5 || ballx==padxr+5))
+       {
+	    num_lives-- ;
+	    score-=20 ;
+	   if(num_lives==0)
+		game_over() ; //GAME OVER
+	   else
+	   {
+		padF = 0 ;
+		init_f = 0 ;
+		level_2() ;
+	   }
+       }
+       if(bally>=yoff+ymax-5)
+       {
+	  num_lives-- ;
+	  score-=20 ;
+	   if(num_lives==0)
+		game_over() ; //GAME OVER
+	   else
+	   {
+		padF = 0 ;
+		init_f = 0 ;
+		level_2() ;
+	   }
+       }
+       ballxm=ballx ;
+       ballym=bally ;
+       ballx += 5*xdir ;
+       bally += 5*ydir ;
+       delay(30);
+
+       //PADDLE MOVEMENT
+       setcolor(BLACK) ;
+       rectangle(padx1m,padyt,padx2m,padyb) ;
+       setcolor(WHITE) ;
+       rectangle(padxl,padyt,padxr,padyb) ;
+       while(kbhit()&&f==0)
+	   key_code = getkey() ;
+       padx1m=padxl ;
+       padx2m=padxr ;
+       if(key_code==77)
+       {
+	   if(padxr<xoff+xmax)
+	   {
+		padxl+=10 ;
+		padxr+=10 ;
+	   }
+       }
+       else if(key_code==75)
+       {
+	   if(padxl>xoff)
+	   {
+		padxl-=10 ;
+		padxr-=10 ;
+	   }
+       }
+       if(!kbhit())
+       {
+	   f=0 ;
+	   key_code=0 ;
+       }
+
+
+       hit();
+
+       if(comp==0)
+		game_over();
+       if(countLvl2==0)
+       {       	countLvl2++;
+		for(int i=0;i<30;i++)
+		       b[i].setF();
+       }
+
+}
 
 void main()
 {
@@ -595,6 +896,30 @@ void main()
 	initialize();
 
 	cleardevice();
+
+	for(int i=0;i<count;i++)
+		b[i].setF() ;
+
+	do
+	{
+		//PLAY AREA
+		setcolor(WHITE) ;
+		rectangle(50,40,600,450) ;
+		rectangle(45,35,605,455) ;
+		setfillstyle(1,RED) ;
+		floodfill(49,39,WHITE) ;
+
+		//BALL MOVEMENT
+	       setcolor(BLACK) ;
+	       setfillstyle(1,BLACK) ;
+	       fillellipse(ballxm,ballym,5,5) ;
+	       setcolor(RED) ;
+	       setfillstyle(1,RED) ;
+	       fillellipse(ballx,bally,5,5) ;
+
+	       level_2();
+
+	}while(1) ;
 
 	closegraph() ;
 }
